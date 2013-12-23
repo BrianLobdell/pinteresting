@@ -1,9 +1,12 @@
 <div class="container-narrow">
 <div class= "jumbotron"
 	<h1> <font size ="20">Welcome to my app</font></h1>
-	<p>Click here to <%= link_to "sign up", "#", class: "btn btn-primary btn-lg" %></p>
 </div>
 <div class= "jumbotron"
-
+<p>Click here to <%= link_to "sign up", "#", class: "btn btn-primary btn-lg" %></p>
+	<div class="col-sm-offset-7 col-sm-10">
+		<p> Already a user? Sign in here </p>
+	</div>
+	<%=render 'layouts/signin' %>
 </div>
 
