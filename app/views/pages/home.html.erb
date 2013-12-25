@@ -5,14 +5,20 @@
 
 <div class= "jumbotron"
 	<div class = "row">
-		<div class = "col-md-6"> 
-			<p>Click here to <%= link_to "sign up", "#", class: "btn btn-primary btn-lg" %></p>
-		</div>
-		<div class = "col-md-6">
-			<p> Already a user? Sign in here </p>
+		<div class = "container center">
+			<% if user_signed_in? %>
+				Welcome to your homepage!
+		</div>		
+			<% else %>	
+				<div class = "col-md-6"> 
+					<p>Click here to <%= link_to "sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+				</div>
+				<div class = "col-md-6">
+					<p> Already a user? <%= link_to "sign in", new_user_session_path, class: "btn btn-primary btn-lg" %> </p>
+			<% end %>		
+
 			
-		</div>
-		<%=render 'layouts/signin' %>
+				</div>
 	</div>		
 </div>
 
