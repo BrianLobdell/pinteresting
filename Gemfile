@@ -15,6 +15,10 @@ gem "paperclip", "~> 3.5.2"
 gem "aws-sdk", "~> 1.31.3"
 gem "masonry-rails", "~> 0.2.1"
 
+# experimental gems
+gem "miro", "~> 0.2.3"
+# end experimental gems
+
 group :development, :test do
 	gem 'sqlite3'
 end
