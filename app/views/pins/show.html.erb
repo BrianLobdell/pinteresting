@@ -11,8 +11,11 @@
 			  <strong>Description:</strong>
 			  <%= @pin.description %>
 			</p>
-
-			<%= link_to 'Edit', edit_pin_path(@pin) if @pin.user == current_user %>
+			<% if @pin.user == current_user %>
+				<%= link_to edit_pin_path(@pin) do%> 
+					<span class="glyphicon glyphicon-edit"></span>
+				<%end%>
+			<%end%>	
 			</div>
 			</div>
 		</div> 

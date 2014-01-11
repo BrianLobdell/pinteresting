@@ -8,6 +8,9 @@
 		<div class = "container center">
 			<%if user_signed_in? %>
 				Welcome to your homepage!
+				<%=colors = Miro::DominantColors.new('/Users/brianlobdell/Desktop/nature-landscape-sunset_497279.jpg')%>
+				<%= colors.to_hex %>
+				<%= print colors %>	
 		</div>		
 			<% else %>	
 				<div class = "col-md-6"> 
